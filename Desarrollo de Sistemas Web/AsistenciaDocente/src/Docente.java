@@ -1,28 +1,44 @@
+import java.util.List;
+
 public class Docente {
-    private String apellido;
-    private String nombre;
-    private String legajo;
-    private String titulo;
     private String dni;
-    private String telefono;
-    private String email;
+    private String nombre;
+    private String apellido;
+    private List<Materia> materias;
+    private List<Carrera> carreras;
+    private List<Comision> comisiones;
+    private List<Asistencia> asistencias;
 
-    public Docente (String apellido,String nombre,String legajo,String titulo,String dni,String telefono,String email){
-        this.apellido=apellido;
-        this.nombre=nombre;
-        this.legajo=legajo;
-        this.titulo=titulo;
-        this.dni=dni;
-        this.telefono=telefono;
-        this.email=email;
-    }
+    // Constructor vacío
+    public Docente() {}
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
+    // Constructor completo
+    public Docente(String dni, String nombre, String apellido, List<Materia> materias, List<Carrera> carreras, List<Comision> comisiones, List<Asistencia> asistencias) {
+        this.dni = dni;
+        this.nombre = nombre;
         this.apellido = apellido;
+        this.materias = materias;
+        this.carreras = carreras;
+        this.comisiones = comisiones;
+        this.asistencias = asistencias;
+    }
+
+    // Métodos
+    public void registrarEntrada() {
+        // Lógica para registrar entrada
+    }
+
+    public void registrarSalida() {
+        // Lógica para registrar salida
+    }
+
+    // Getters y Setters
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public String getNombre() {
@@ -33,35 +49,43 @@ public class Docente {
         this.nombre = nombre;
     }
 
-    public String getDni() {
-        return dni;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public List<Materia> getMaterias() {
+        return materias;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setMaterias(List<Materia> materias) {
+        this.materias = materias;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public List<Carrera> getCarreras() {
+        return carreras;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setCarreras(List<Carrera> carreras) {
+        this.carreras = carreras;
     }
 
-    public String getEmail() {
-        return email;
+    public List<Comision> getComisiones() {
+        return comisiones;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setComisiones(List<Comision> comisiones) {
+        this.comisiones = comisiones;
+    }
+
+    public List<Asistencia> getAsistencias() {
+        return asistencias;
+    }
+
+    public void setAsistencias(List<Asistencia> asistencias) {
+        this.asistencias = asistencias;
     }
 }
