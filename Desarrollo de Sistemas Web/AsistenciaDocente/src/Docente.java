@@ -1,91 +1,28 @@
 import java.util.List;
 
-public class Docente {
-    private String dni;
-    private String nombre;
-    private String apellido;
-    private List<Materia> materias;
-    private List<Carrera> carreras;
-    private List<Comision> comisiones;
-    private List<Asistencia> asistencias;
+public class Docente extends Persona {
+    private String legajo;
+    private List<AsistenciaDocente> asistencias;
+    private List<MateriaImplementada> materias;
 
-    // Constructor vacío
-    public Docente() {}
-
-    // Constructor completo
-    public Docente(String dni, String nombre, String apellido, List<Materia> materias, List<Carrera> carreras, List<Comision> comisiones, List<Asistencia> asistencias) {
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.materias = materias;
-        this.carreras = carreras;
-        this.comisiones = comisiones;
+    public Docente(String dni, String nombre, String apellido, String legajo,
+                   List<AsistenciaDocente> asistencias, List<MateriaImplementada> materias) {
+        super(dni, nombre, apellido);
+        this.legajo = legajo;
         this.asistencias = asistencias;
-    }
-
-    // Métodos
-    public void registrarEntrada() {
-        // Lógica para registrar entrada
-    }
-
-    public void registrarSalida() {
-        // Lógica para registrar salida
-    }
-
-    // Getters y Setters
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public List<Materia> getMaterias() {
-        return materias;
-    }
-
-    public void setMaterias(List<Materia> materias) {
         this.materias = materias;
     }
 
-    public List<Carrera> getCarreras() {
-        return carreras;
-    }
+    public String getLegajo() { return legajo; }
+    public void setLegajo(String legajo) { this.legajo = legajo; }
 
-    public void setCarreras(List<Carrera> carreras) {
-        this.carreras = carreras;
-    }
+    public List<AsistenciaDocente> getAsistencias() { return asistencias; }
+    public void setAsistencias(List<AsistenciaDocente> asistencias) { this.asistencias = asistencias; }
 
-    public List<Comision> getComisiones() {
-        return comisiones;
-    }
-
-    public void setComisiones(List<Comision> comisiones) {
-        this.comisiones = comisiones;
-    }
-
-    public List<Asistencia> getAsistencias() {
-        return asistencias;
-    }
-
-    public void setAsistencias(List<Asistencia> asistencias) {
-        this.asistencias = asistencias;
-    }
+    public List<MateriaImplementada> getMaterias() { return materias; }
+    public void setMaterias(List<MateriaImplementada> materias) { this.materias = materias; }
 }
+
+
+
+
